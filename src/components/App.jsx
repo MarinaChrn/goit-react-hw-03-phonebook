@@ -23,8 +23,6 @@ export class App extends Component  {
     }
   }
 
-
-
   addContact = (contact) =>{
     let arraysOfName=[];
     this.state.contacts.map(element=> (
@@ -46,13 +44,11 @@ export class App extends Component  {
   }
 
   getVisibleContacts () {
-    console.log(this.state.contacts)
     return this.state.contacts.filter(contact =>
       contact.name.toLowerCase().includes(this.state.filter)
     )};
 
   render () {
-    console.log(this.state.contacts)
     return (
     <Layout>
       <h1>Phonebook</h1>
